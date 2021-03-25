@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Sidebar() {
     return(
         <div className="sidenav">
             <span className="dot"></span>
@@ -19,6 +19,14 @@ export default function Navbar() {
                 <span className="bluedot">
                         <span className="affiliatelogo">Buy This Too!</span>
                 </span>
+            </div>
+            <div className="sidenav-footer">
+                <div className="footerbtn pl-3">
+                    My Portfolio
+                </div>
+                <div className="footerbtn pl-3">
+                    My GitHub
+                </div>
             </div>
         </div>
     )
