@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
-import Welcome from "./pages/Welcome";
+import Main from "./pages/Main";
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div>
         <Wrapper>
-          <Route exact path ="/" component={Welcome} />
+          <Route exact path ="/" component={Main} />
         </Wrapper>
       </div>
     </Router>
