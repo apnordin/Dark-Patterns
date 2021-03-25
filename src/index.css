@@ -204,3 +204,46 @@ p {
   display: float;
   margin-left: -117px;
 }
+
+.lightblue {
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(244, 252, 255);
+  max-width: 1000px;
+  padding-top: 10px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.boldheader {
+  font-weight: 600;
+}
+
+.maintexth5 {
+  line-height: 35px;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.btn-main {
+  color: rgb(255, 255, 255);
+  background-color: rgb(3, 124, 143);
+  border-color: rgb(3, 124, 143);
+  height: 48px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn-main:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 108, 123);
+  border-color: rgb(17, 108, 123);
+}
+
+.btn-main:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(25, 98, 110);
+  border-color: rgb(25, 98, 110);
+  box-shadow: 0 0 0 0rem rgba(25, 98, 110, 0.5);
+}
