@@ -1,4 +1,5 @@
 import React from "react";
+import { HandThumbsDownFill } from "react-bootstrap-icons";
 
 export default function Sidebar() {
 
@@ -14,10 +15,14 @@ export default function Sidebar() {
 
     return(
         <div className="sidenav">
-            <span className="dot"></span>
+            <span className="dot">
+                <HandThumbsDownFill className="thumbBig" size={35} color="white" />
+            </span>
             <div className="bannerlogo">
                 <span className="dotsmall">
-                    <span className="namelogo">darkpatterns</span>
+                    <span className="namelogo">darkpatterns
+                    <HandThumbsDownFill className="thumbSmall" size={14} color="white" />
+                    </span>
                 </span>
             </div>
             <div className="blackspace"></div>

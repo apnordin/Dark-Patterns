@@ -176,3 +176,19 @@ p {
   cursor: pointer;
   background-color: rgb(107, 108, 114);
 }
+
+.thumbicon {
+  height: 100px;
+  width: 100px;
+  background: rgb(0, 0, 0, 0);
+}
+
+.thumbBig {
+  margin-top: 10px;
+  margin-left: 7px;
+}
+
+.thumbSmall {
+  margin-top: -52px;
+  margin-left: 2px;
+}
