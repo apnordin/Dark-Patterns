@@ -21,11 +21,12 @@ p {
 .navbar:after {
   content: "";
   display: block;
-  margin: 0 42px 0 180px;
-  width: 90%;
+  /* margin: 0 200px 0 80px; */
+  width: 87%;
   position: absolute;
   top: 54px;
-  right: 15px;
+  /* right: 120px; */
+  left: 195px;
   border-bottom: 1px solid rgb(218, 220, 224);
 }
 
@@ -190,5 +191,16 @@ p {
 
 .thumbSmall {
   margin-top: -52px;
-  margin-left: 2px;
+  margin-left: 3px;
+}
+
+.awardSmall {
+  margin-left: -87px;
+  margin-top: -4px;
+}
+
+.dropletSmall {
+  margin-top: -4px;
+  display: float;
+  margin-left: -117px;
 }

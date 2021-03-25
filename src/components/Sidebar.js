@@ -1,5 +1,5 @@
 import React from "react";
-import { HandThumbsDownFill } from "react-bootstrap-icons";
+import { HandThumbsDownFill, Award, DropletHalf } from "react-bootstrap-icons"; 
 
 export default function Sidebar() {
 
@@ -21,19 +21,25 @@ export default function Sidebar() {
             <div className="bannerlogo">
                 <span className="dotsmall">
                     <span className="namelogo">darkpatterns
-                    <HandThumbsDownFill className="thumbSmall" size={14} color="white" />
+                    <HandThumbsDownFill className="thumbSmall" size={13} color="white" />
                     </span>
                 </span>
             </div>
             <div className="blackspace"></div>
             <div className="affiliate">
                 <span className="greendot">
-                        <span className="affiliatelogo">Buy This!</span>
+                        <span className="affiliatelogo">
+                            Buy This!
+                            <Award className="awardSmall" size={14} color="white" />
+                        </span>
                 </span>
             </div>
             <div className="affiliate">
                 <span className="bluedot">
-                        <span className="affiliatelogo">Buy This Too!</span>
+                        <span className="affiliatelogo">
+                            Buy This Too!
+                            <DropletHalf className="dropletSmall" size={13} color="white" />
+                        </span>
                 </span>
             </div>
             <div className="sidenav-footer">
