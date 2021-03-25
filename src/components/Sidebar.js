@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { HandThumbsDownFill, Award, DropletHalf } from "react-bootstrap-icons"; 
 
 export default function Sidebar() {
@@ -13,6 +13,12 @@ export default function Sidebar() {
         window.open(url, '_blank');
     }
 
+    const initialText = 'Credit Helper';
+    const [text, setText] = useState(initialText);
+
+    const initialText2 = 'Spearmint';
+    const [text2, setText2] = useState(initialText2);
+
     return(
         <div className="sidenav">
             <span className="dot">
@@ -26,19 +32,22 @@ export default function Sidebar() {
                 </span>
             </div>
             <div className="blackspace"></div>
-            <div className="affiliate">
+            <div className="affiliate"
+                onMouseOver={() => setText('Buy This!')}
+                onMouseLeave={() => setText(initialText)}>
                 <span className="greendot">
-                        <span className="affiliatelogo">
-                            Buy This!
-                            <Award className="awardSmall" size={14} color="white" />
+                        <span
+                        className="affiliatelogo">
+                            {text}
                         </span>
                 </span>
             </div>
-            <div className="affiliate">
+            <div className="affiliate"
+            onMouseOver={() => setText2('Buy This Too!')}
+            onMouseLeave={() => setText2(initialText2)}>
                 <span className="bluedot">
                         <span className="affiliatelogo">
-                            Buy This Too!
-                            <DropletHalf className="dropletSmall" size={13} color="white" />
+                            {text2}
                         </span>
                 </span>
             </div>
