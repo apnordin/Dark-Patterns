@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { HandThumbsDownFill, Award, DropletHalf } from "react-bootstrap-icons"; 
+import { HandThumbsDownFill } from "react-bootstrap-icons"; 
 
 export default function Sidebar() {
 
