@@ -1,7 +1,7 @@
 import React from "react";
 import { Briefcase, Truck, Cash, Pencil, Eyeglasses, GraphUp, Trophy, PersonSquare, Gem, Sunglasses } from "react-bootstrap-icons";
 
-export default function Financial ( {setGoToFinancial, setGoToProductSelection } ) {
+export default function Financial ( {setGoToFinancial, setGoToCLFTP } ) {
 
     const finBtnClicked = (i) => {
         console.log('FINBTNCLICKED', i)
@@ -50,7 +50,7 @@ export default function Financial ( {setGoToFinancial, setGoToProductSelection }
                     <hr />
                 </div>
             </div>
-            <button onClick={() => {setGoToFinancial(false); setGoToProductSelection(true);}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
+            <button onClick={() => {setGoToFinancial(false); setGoToCLFTP(true);}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
         </div>
     )
 }
