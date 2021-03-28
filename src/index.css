@@ -236,3 +236,59 @@ p {
   border-color: rgb(25, 98, 110);
   box-shadow: 0 0 0 0rem rgba(25, 98, 110, 0.5);
 }
+
+.btn-grey {
+  color: rgb(0, 0, 0);
+  background-color: rgb(227, 229, 232);
+  border-color: rgb(227, 229, 232);
+  height: 48px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn-grey:hover {
+  /* color: rgb(255, 255, 255); */
+  background-color: rgb(207, 208, 209);
+  border-color: rgb(207, 208, 209);
+}
+
+.btn-grey:focus {
+  /* color: rgb(255, 255, 255); */
+  background-color: rgb(175, 176, 177);
+  border-color: rgb(175, 176, 177);
+  box-shadow: 0 0 0 0rem rgba(170, 175, 176, 0.5);
+}
+
+.subheader {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 22px;
+  color: rgb(115, 115, 115);
+}
+
+.btn-finance {
+  background-color: white;
+  height: 175px;
+  width: 165px;
+  box-shadow: 0px 0px 5px #b3b3b3;
+  border-radius: 12px;
+}
+
+.btnFinIcon {
+  margin-top: 20px;
+  height: 60px;
+}
+
+.btnFinText {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(80, 80, 80);
+}
+
+.btnFinSubText {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(80, 80, 80);
+}
