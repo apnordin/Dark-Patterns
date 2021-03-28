@@ -1,5 +1,5 @@
 import React from "react";
-import { Truck } from "react-bootstrap-icons";
+import { Briefcase, Truck, Cash, Pencil, Eyeglasses, GraphUp, Trophy, PersonSquare, Gem, Sunglasses } from "react-bootstrap-icons";
 
 export default function Financial () {
 
@@ -8,9 +8,17 @@ export default function Financial () {
     }
 
     const finbtns = [
-        { name: "job", icon: <Truck size={60} />, text: "Had a job", subText: "(W-2)" },
-        { name: "charity" },
-        { name: "college" },
+        { name: "job", icon: <Briefcase size={60} />, text: "Had a job", subText: "(W-2)" },
+        { name: "charity", icon: <Cash size={60} />, text: "Donations to a charity" },
+        { name: "college", icon: <Pencil size={50} />, text: "College expenses/tuition", subText: "(1098-T)" },
+        { name: "bank", icon: <GraphUp size={60} />, text: "Bank account interest", subText: "(1099-INT)" },
+        { name: "stuloans", icon: <Eyeglasses size={60} />, text:"Paid student loan interest", subText: "(1098-E)" },
+        { name: "business", icon: <Trophy size={50} />, text: "Owned a business" },
+        { name: "relo", icon: <Truck size={60} />, text: "Moved to a new state" },
+        { name: "self", icon: <PersonSquare size={55} />, text: "Self-employed", subText: "(1099-MISC, expenses)"},
+        { name: "marital", icon: <Gem size={60} />, text: "Change in marital status"},
+        { name: "bubble", icon: <Sunglasses size={60} />, text: "Shorted the housing market"}
+
     ]
 
     return (
@@ -22,7 +30,7 @@ export default function Financial () {
             <div className="row">
                 <div className="col-12 text-center mt-4">
                     { finbtns.map(function(finbtn, i) {
-                        return (<div className="btn btn-finance" key={finbtn.name } index={ i }>
+                        return (<div className="btn btn-finance mb-4" key={finbtn.name } index={ i }>
                                 <div className="btnFinIcon">
                                     {finbtn.icon}
                                 </div>
