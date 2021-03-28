@@ -3,8 +3,14 @@ import { Briefcase, Truck, Cash, Pencil, Eyeglasses, GraphUp, Trophy, PersonSqua
 
 export default function Financial ( {setGoToFinancial, setGoToProductSelection } ) {
 
-    const finBtnClicked = () => {
-
+    const finBtnClicked = (i) => {
+        console.log('FINBTNCLICKED', i)
+        const thisBtn = document.getElementById(i);
+        if (thisBtn.className === "btn btn-finance mb-4") {
+            thisBtn.className = "btn btn-finance mb-4 btnSelected";
+        } else if (thisBtn.className === "btn btn-finance mb-4 btnSelected") {
+            thisBtn.className = "btn btn-finance mb-4";
+        }
     }
 
     const finbtns = [
@@ -30,7 +36,8 @@ export default function Financial ( {setGoToFinancial, setGoToProductSelection }
             <div className="row">
                 <div className="col-12 text-center mt-4">
                     { finbtns.map(function(finbtn, i) {
-                        return (<div className="btn btn-finance mb-4" key={finbtn.name } index={ i }>
+                        return (
+                            <div className="btn btn-finance mb-4" key={finbtn.name } index={ i } id={ i } onClick={() => finBtnClicked(i)}>
                                 <div className="btnFinIcon">
                                     {finbtn.icon}
                                 </div>

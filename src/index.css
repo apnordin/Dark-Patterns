@@ -324,3 +324,9 @@ th {
   width: 200px;
   font-size: 20px;
 }
+
+.btnSelected {
+  background-color: rgb(233, 249, 240);
+  border-color: rgb(153, 226, 187);
+  box-shadow: none;
+}
