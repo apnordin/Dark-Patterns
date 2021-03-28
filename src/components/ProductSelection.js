@@ -1,5 +1,5 @@
 import React from "react";
-import {Check2All, Check2Circle, Check2Square, Check2 } from "react-bootstrap-icons";
+import { Check2 } from "react-bootstrap-icons";
 
 export default function ProductSelection () {
     return (

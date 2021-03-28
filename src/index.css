@@ -79,6 +79,11 @@ p {
   margin-top: 35px;
 }
 
+.mainpagewelcome {
+  margin-top: 35px;
+  font-weight: 700;
+}
+
 .dollardollar {
   color: rgb(107, 108, 114);
   font-size: 80px;
