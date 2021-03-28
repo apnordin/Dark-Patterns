@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Tutorial ( {setGoToFinancial, setGoToTutorial }) {
+export default function Tutorial ( {setGoToFinancial, setGoToTutorial } ) {
     return (
         <div className="col-12 text-center">
             <h2 className="welcome-back">Instructions

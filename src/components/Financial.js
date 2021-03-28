@@ -1,7 +1,7 @@
 import React from "react";
 import { Briefcase, Truck, Cash, Pencil, Eyeglasses, GraphUp, Trophy, PersonSquare, Gem, Sunglasses } from "react-bootstrap-icons";
 
-export default function Financial () {
+export default function Financial ( {setGoToFinancial, setGoToProductSelection } ) {
 
     const finBtnClicked = () => {
 
@@ -39,8 +39,11 @@ export default function Financial () {
                             </div>
                             )
                     })}
+                    <p className="bottomtext my-4">It's OK to pick something even if you're not sure if it applies. We'll help you figure that out later.</p>
+                    <hr />
                 </div>
             </div>
+            <button onClick={() => {setGoToFinancial(false); setGoToProductSelection(true);}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
         </div>
     )
 }
