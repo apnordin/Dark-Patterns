@@ -2,19 +2,26 @@ import React, {useState} from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Welcome from "../components/Welcome";
+import Tutorial from "../components/Tutorial";
+import Financial from "../components/Financial";
 
 export default function Main () {
 
-    const initialGetStartedClicked = false;
-    const [getStartedClicked, setGetStartedClicked] = useState(initialGetStartedClicked);
+    const initialGoToTutorial = false;
+    const intialGoToFinancial = false;
+    const [goToTutorial, setGoToTutorial] = useState(initialGoToTutorial);
+    const [goToFinancial, setGoToFinancial] = useState(intialGoToFinancial)
 
-    function MainPageContent() {
-        if (getStartedClicked === false) {
-            return <Welcome />
-        } else {
-            return (
-                <div>heyyyy</div>
-            )
+    function MainPageContent( {setGoToTutorial, setGoToFinancial }) {
+        if (goToTutorial === false && goToFinancial === false) {
+            return <Welcome setGoToTutorial={setGoToTutorial} />
+
+        } else if (goToTutorial === true) {
+            return <Tutorial setGoToTutorial={setGoToTutorial} setGoToFinancial={setGoToFinancial} />
+
+        } else if (goToFinancial === true) {
+            return <Financial />
+
         }
     }
 
@@ -25,12 +32,10 @@ export default function Main () {
             <Sidebar />
             <div className="container">
                 <div className="row">
-                   <MainPageContent />
+                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToFinancial={setGoToFinancial}/>
                 </div>
             </div>
-            <div className="col-12 text-center">
-                <button onClick={() => setGetStartedClicked(true)} type="button" className="btn btn-main mt-3">Click Here to get Started!</button>
-            </div>
+            
         
         </div>
     )
