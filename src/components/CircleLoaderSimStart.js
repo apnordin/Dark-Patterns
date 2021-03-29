@@ -45,7 +45,6 @@ export default function CircleLoaderSimStart ( {setGoToCircle, setGoToStart }) {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
             <div className="mt-5" style={containerStyle}>
                 <motion.span style={circleStyle} animate={{ rotate: 360 }} transition={spinTransition}/>
             </div>

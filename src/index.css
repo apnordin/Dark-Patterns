@@ -308,7 +308,6 @@ p {
   color: rgb(135, 136, 137);
 }
 
-table,
 th,
 td {
   border: 1px solid black;
@@ -334,4 +333,16 @@ th {
   background-color: rgb(233, 249, 240);
   border-color: rgb(153, 226, 187);
   box-shadow: none;
+}
+
+.noborder {
+  border: none;
+}
+
+.recommended {
+  background-color: rgb(15, 168, 82);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
 }
