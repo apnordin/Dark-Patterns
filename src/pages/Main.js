@@ -6,6 +6,7 @@ import Tutorial from "../components/Tutorial";
 import Financial from "../components/Financial";
 import ProductSelection from "../components/ProductSelection"
 import StartPage from "../components/StartPage"
+import DeluxeTCs from "../components/DeluxeTCs"
 import CircleLoaderSimStart from "../components/CircleLoaderSimStart";
 import CircleLoaderFinToProd from "../components/CircleLoaderFinToProd";
 
@@ -17,15 +18,17 @@ export default function Main () {
     const intialGoToFinancial = false;
     const initialGoToCLFTP = false;
     const initialGoToProductSelection = false;
+    const initialGoToDeluxeTCs = false;
     const [goToTutorial, setGoToTutorial] = useState(initialGoToTutorial);
     const [goToCircle, setGoToCircle] = useState(initialGoToCircle);
     const [goToStart, setGoToStart] = useState(initialGoToStart);
     const [goToFinancial, setGoToFinancial] = useState(intialGoToFinancial);
     const [goToCLFTP, setGoToCLFTP] = useState(initialGoToCLFTP)
     const [goToProductSelection, setGoToProductSelection] = useState(initialGoToProductSelection);
+    const [goToDeluxeTCs, setGoToDeluxeTCs] = useState(initialGoToDeluxeTCs);
 
     function MainPageContent( {setGoToTutorial, setGoToFinancial }) {
-        if (goToTutorial === false && goToStart === false && goToFinancial === false && goToProductSelection === false && goToCircle === false && goToCLFTP === false) {
+        if (goToTutorial === false && goToStart === false && goToFinancial === false && goToProductSelection === false && goToCircle === false && goToCLFTP === false && goToDeluxeTCs === false) {
             return <Welcome setGoToTutorial={setGoToTutorial} />
 
         } else if (goToTutorial === true) {
@@ -44,7 +47,10 @@ export default function Main () {
             return <CircleLoaderFinToProd setGoToCLFTP={setGoToCLFTP} setGoToProductSelection={setGoToProductSelection} />
 
         } else if (goToProductSelection === true) {
-            return <ProductSelection />
+            return <ProductSelection  setGoToProductSelection={setGoToProductSelection} setGoToDeluxeTCs={setGoToDeluxeTCs}/>
+
+        } else if (goToDeluxeTCs === true) {
+            return <DeluxeTCs />
         }
     }
 
@@ -54,7 +60,7 @@ export default function Main () {
             <Sidebar />
             <div className="container">
                 <div className="row">
-                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} />
+                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} />
                 </div>
             </div>
             

@@ -25,7 +25,7 @@ export default function StartPage ( {setGoToStart, setGoToFinancial }) {
                 </div>
                 <div className="col-12 text-center">
                     <h2 className="mt-5 mb-4">Just click below to begin filing!</h2>
-                <button onClick={() => {setGoToStart(false); setGoToFinancial(true);}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
+                    <button onClick={() => {setGoToStart(false); setGoToFinancial(true);}} type="button" className="btn btn-main ml-1 mt-3">File for FREE!</button>
                 </div>
             </div>
         </div>

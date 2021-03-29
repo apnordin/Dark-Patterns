@@ -322,6 +322,7 @@ table.center {
 
 td {
   width: 200px;
+  font-size: 14px;
 }
 
 th {
@@ -345,4 +346,81 @@ th {
   font-size: 14px;
   font-weight: 600;
   padding: 5px;
+}
+
+.deluxe {
+  border-right: 2px solid rgb(15, 168, 82);
+  border-left: 2px solid rgb(15, 168, 82);
+}
+
+.bottom {
+  border-bottom: 2px solid rgb(15, 168, 82);
+}
+
+.btn-upgrade {
+  color: white;
+  background-color: rgb(15, 168, 82);
+  box-shadow: none;
+  border-color: rgb(15, 168, 82);
+  height: 40px;
+  width: 150px;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.btn-upgrade:hover {
+  color: white;
+  background-color: rgb(16, 145, 72);
+  border-color: rgb(16, 145, 72);
+}
+
+.btn-upgrade:focus {
+  color: white;
+  background-color: rgb(18, 129, 66);
+  border-color: rgb(18, 129, 66);
+  box-shadow: 0 0 0 0rem rgba(39, 192, 106, 0);
+}
+
+.btn-hollow {
+  color: rgb(56, 91, 97);
+  border: 1px solid rgb(56, 91, 97);
+  height: 40px;
+  width: 150px;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.btn-hollow:hover {
+  /* color: white; */
+  background-color: rgb(244, 247, 247);
+  border-color: rgb(107, 110, 110);
+}
+
+.btn-hollow:focus {
+  /* color: white; */
+  background-color: rgb(225, 230, 231);
+  border-color: rgb(90, 94, 94);
+  box-shadow: 0 0 0 0rem rgba(39, 192, 106, 0.5);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pricesubtext {
+  margin: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(80, 80, 80);
+}
+
+.nobottomborder {
+  border-bottom: none;
+}
+
+.notopborder {
+  border-top: none;
 }
