@@ -225,6 +225,7 @@ p {
   background-color: rgb(3, 124, 143);
   border-color: rgb(3, 124, 143);
   height: 48px;
+  min-width: 100px;
   font-weight: 600;
   font-size: 18px;
 }
@@ -423,4 +424,23 @@ th {
 
 .notopborder {
   border-top: none;
+}
+
+.maintext {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.boldtext {
+  font-weight: 500;
+}
+
+.lightgrey {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(245, 245, 245);
+  max-width: 1000px;
+  padding-top: 10px;
+  padding-left: 65px;
+  padding-right: 65px;
 }
