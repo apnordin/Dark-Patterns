@@ -24,9 +24,14 @@ export default function DeluxeTCs( { setGoToDeluxeTCs, setGoToCreditHelper }) {
                         Just click Next in order to keep filing! By doing so, you agree to DPTax's Terms and Services.
                     </p>
                 </div>
-                <div className="col-12 text-center">
+                <div className="col-12 blankwhite">
                     <h3 className="mt-3 mb-1">Keep going to prepare your income:</h3>
-                    <button onClick={() => {setGoToDeluxeTCs(false); setGoToCreditHelper(true)}} type="button" className="btn btn-main ml-1 mt-3">Next</button>
+                        <hr className="mt-3 mb-0" />
+                        <div className="text-right">
+                            <button onClick={() => {setGoToDeluxeTCs(false); setGoToCreditHelper(true)}} type="button" className="btn btn-main ml-1 mt-3">Next</button>
+                        </div>
+                </div>
+                <div className="col-12 text-right">
                 </div>
             </div>
         </div>

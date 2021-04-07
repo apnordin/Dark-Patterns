@@ -226,7 +226,7 @@ p {
   border-color: rgb(3, 124, 143);
   height: 48px;
   min-width: 100px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -248,7 +248,7 @@ p {
   background-color: rgb(227, 229, 232);
   border-color: rgb(227, 229, 232);
   height: 48px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -443,4 +443,14 @@ th {
   padding-top: 10px;
   padding-left: 65px;
   padding-right: 65px;
+}
+
+.blankwhite {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  max-width: 1000px;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
