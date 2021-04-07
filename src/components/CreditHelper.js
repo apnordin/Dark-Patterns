@@ -13,8 +13,8 @@ export default function CreditHelper( { setGoToCreditHelper, setGoToCHTerms } ) 
             <p className="maintext">Learn More</p>
             <hr className="mt-4 mb-0" />
             <div className="text-right">
-                            <button onClick={() => {setGoToCreditHelper(false); setGoToCHTerms(true)}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
-                        </div>
+                <button onClick={() => {setGoToCreditHelper(false); setGoToCHTerms(true)}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
+            </div>
         </div>
     )
 }

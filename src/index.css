@@ -431,6 +431,10 @@ th {
   line-height: 30px;
 }
 
+.disclaimer {
+  font-size: 13.5px;
+}
+
 .boldtext {
   font-weight: 500;
 }
@@ -441,8 +445,8 @@ th {
   background-color: rgb(245, 245, 245);
   max-width: 1000px;
   padding-top: 10px;
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-left: 55px;
+  padding-right: 55px;
 }
 
 .blankwhite {
@@ -458,5 +462,9 @@ th {
 .subtext {
   font-size: 14px;
   font-weight: 400;
+  color: rgb(120, 120, 120);
+}
+
+.greytext {
   color: rgb(120, 120, 120);
 }

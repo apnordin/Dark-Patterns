@@ -5,7 +5,7 @@ export default function DeluxeTCs( { setGoToDeluxeTCs, setGoToCreditHelper }) {
     return (
         <div className="col-12 text-center">
 
-            <h2 className="welcome-back">
+            <h2 className="text-left welcome-back">
                     Click Next to continue with DPTax Deluxe.
             </h2>
             <div className="row">
@@ -25,7 +25,7 @@ export default function DeluxeTCs( { setGoToDeluxeTCs, setGoToCreditHelper }) {
                     </p>
                 </div>
                 <div className="col-12 blankwhite">
-                    <h3 className="mt-3 mb-1">Keep going to prepare your income:</h3>
+                    <h5 className="mt-3 mb-1 text-left">Next steps: prepare your income</h5>
                         <hr className="mt-3 mb-0" />
                         <div className="text-right">
                             <button onClick={() => {setGoToDeluxeTCs(false); setGoToCreditHelper(true)}} type="button" className="btn btn-main ml-1 mt-3">Next</button>
