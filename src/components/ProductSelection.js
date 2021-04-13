@@ -8,6 +8,9 @@ export default function ProductSelection ( {setGoToProductSelection, setGoToDelu
                 Based on your selections, you will need to file with DPTax Deluxe.
             </h2>
             <table className="center mt-5 mb-5">
+                <tbody>
+
+                
                 <tr>
                     <th className="noborder"></th>
                     <th className="noborder"></th>
@@ -93,7 +96,7 @@ export default function ProductSelection ( {setGoToProductSelection, setGoToDelu
                         <button className="btn btn-upgrade">Upgrade</button>
                     </td>
                 </tr>
-
+                </tbody>
             </table>
         </div>
     )

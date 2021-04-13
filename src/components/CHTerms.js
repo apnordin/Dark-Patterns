@@ -23,27 +23,27 @@ export default function CHTerms( { setGoToCHTerms, setGoToWAI } ) {
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="firstname">Your Name</label>
+                                <label htmlFor="firstname">Your Name</label>
                                 <input type="text" className="form-control" id="firstname"></input>
-                                <small id="firstnameHelp" class="form-text">First name</small>
+                                <small id="firstnameHelp" className="form-text">First name</small>
                             </div>
                         </form>
                     </div>
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="lastname"></label>
+                                
                                 <input type="text" className="form-control mt-2" id="lastname"></input>
-                                <small id="lastnameHelp" class="form-text">Last name</small>
+                                <small id="lastnameHelp" className="form-text">Last name</small>
                             </div>
                         </form>
                     </div>
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="date"></label>
+                                <label htmlFor="date"></label>
                                 <input type="text" className="form-control mt-2" id="date" placeholder="mm/dd/yyyy"></input>
-                                <small id="lastnameHelp" class="form-text">Today's Date</small>
+                                <small id="lastnameHelp" className="form-text">Today's Date</small>
                             </div>
                         </form>
                     </div>
@@ -52,27 +52,27 @@ export default function CHTerms( { setGoToCHTerms, setGoToWAI } ) {
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="firstname">Spouse's name, if filing together</label>
+                                <label htmlFor="firstname">Spouse's name, if filing together</label>
                                 <input type="text" className="form-control" id="firstname"></input>
-                                <small id="firstnameHelp" class="form-text">First name</small>
+                                <small id="firstnameHelp" className="form-text">First name</small>
                             </div>
                         </form>
                     </div>
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="lastname"></label>
+                                <label htmlFor="lastname"></label>
                                 <input type="text" className="form-control mt-2" id="lastname"></input>
-                                <small id="lastnameHelp" class="form-text">Last name</small>
+                                <small id="lastnameHelp" className="form-text">Last name</small>
                             </div>
                         </form>
                     </div>
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                <label for="date"></label>
+                                <label htmlFor="date"></label>
                                 <input type="text" className="form-control mt-2" id="date" placeholder="mm/dd/yyyy"></input>
-                                <small id="lastnameHelp" class="form-text">Today's Date</small>
+                                <small id="lastnameHelp" className="form-text">Today's Date</small>
                             </div>
                         </form>
                     </div>

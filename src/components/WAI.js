@@ -1,15 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CashStack } from "react-bootstrap-icons";
+import { motion } from "framer-motion";
+
+const containerStyle = {
+    margin: "auto",
+    position: "relative",
+    width: "2rem",
+    height: "2rem",
+};
+const circleStyle = {
+    display: "block",
+    width: "2rem",
+    height: "2rem",
+    border: "1rem solid #e9e9e9",
+    borderTop: "1rem solid #3498db",
+    borderRadius: "50%",
+    position: "absolute",
+    boxSizing: "border-box",
+    top: 0,
+    left: 0
+};
+
+const spinTransition = {
+    loop: Infinity,
+    duration: 1,
+    ease: "linear"
+}
 
 export default function WAI ( ) {
 
+    const [jobDone, setJobDone] = useState(false);
+    const [intDone, setIntDone] = useState(false);
+    const [hsaDone, setHSADone] = useState(false);
+
     const [jobClicked, setJobClicked] = useState(false);
     const JobContent = () => {
-        if (jobClicked === false) {
+        if (jobClicked === false && jobDone === false) {
             return (
                 <button onClick={() => setJobClicked(true)} type="button" className="btn btn-main">Start</button>
                 )
-        } else {
+        } else if (jobClicked === true && jobDone === false) {
+            const countDown = () => {
+                const interval = setInterval(() => {
+                    setJobDone(true);
+                }, 5750);
+                return () => clearInterval(interval);
+            }
+            countDown()
+            return (
+                <div className="mb-4">
+                    Importing W2...
+                    <span className="ml-3" style={containerStyle}>
+                        <motion.span style={circleStyle} animate={{ rotate: 360 }} transition={spinTransition}/>
+                    </span>
+                </div>
+            )
+        } else if (jobClicked === true && jobDone === true) {
             return (
                 <p className="completed">Done!</p>
             )
@@ -18,11 +64,27 @@ export default function WAI ( ) {
 
     const [intClicked, setIntClicked] = useState(false);
     const IntContent = () => {
-        if (intClicked === false) {
+        if (intClicked === false && intDone === false) {
             return (
                 <button onClick={() => setIntClicked(true)} type="button" className="btn btn-main">Start</button>
                 )
-        } else {
+        } else if (intClicked === true && intDone === false) {
+            const countDown = () => {
+                const interval = setInterval(() => {
+                    setIntDone(true);
+                }, 5750);
+                return () => clearInterval(interval);
+            }
+            countDown()
+            return (
+                <div className="mb-4">
+                    Importing 1099-INT...
+                    <span className="ml-3" style={containerStyle}>
+                        <motion.span style={circleStyle} animate={{ rotate: 360 }} transition={spinTransition}/>
+                    </span>
+                </div>
+            )
+        } else if (intClicked === true & intDone === true) {
             return (
                 <p className="completed">Done!</p>
             )
@@ -31,11 +93,27 @@ export default function WAI ( ) {
 
     const [hsaClicked, setHSAClicked] = useState(false);
     const HSAContent = () => {
-        if (hsaClicked === false) {
+        if (hsaClicked === false && hsaDone === false) {
             return (
                 <button onClick={() => setHSAClicked(true)} type="button" className="btn btn-main">Start</button>
                 )
-        } else {
+        } else if (hsaClicked === true & hsaDone === false) {
+            const countDown = () => {
+                const interval = setInterval(() => {
+                    setHSADone(true);
+                }, 5750);
+                return () => clearInterval(interval);
+            }
+            countDown()
+            return (
+                <div className="mb-4">
+                    Importing 1099-SA...
+                    <span className="ml-3" style={containerStyle}>
+                        <motion.span style={circleStyle} animate={{ rotate: 360 }} transition={spinTransition}/>
+                    </span>
+                </div>
+            )
+            } else if (hsaClicked === true & hsaDone === true) {
             return (
                 <p className="completed">Done!</p>
             )
