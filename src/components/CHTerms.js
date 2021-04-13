@@ -81,7 +81,7 @@ export default function CHTerms( { setGoToCHTerms, setGoToWAI } ) {
             </div>
             <hr />
             <div className="text-right mb-4">
-                <button onClick={() => {setGoToCHTerms(false); setGoToWAI(true)}} type="button" className="btn btn-grey ml-1 mr-3 mt-3">No Thanks</button>
+                <button onClick={() => {setGoToCHTerms(false); setGoToWAI(true)}} type="button" className="btn btn-light-grey ml-1 mr-3 mt-3">No Thanks</button>
                 <button onClick={() => {setGoToCHTerms(false); setGoToWAI(true)}} type="button" className="btn btn-main ml-1 mt-3">Continue</button>
             </div>
         </div>

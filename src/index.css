@@ -74,6 +74,10 @@ p {
 .welcome-back {
   margin-top: 35px;
 }
+.subsetheader {
+  font-weight: 600;
+  margin-top: 45px;
+}
 
 .savings {
   margin-top: 35px;
@@ -199,6 +203,19 @@ p {
   margin-left: 3px;
 }
 
+.subsetIcon {
+  margin-top: -73px;
+}
+
+.subsetIconCircle {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(70, 173, 194);
+  border-radius: 50%;
+  display: block;
+  margin: -36px auto 0 auto;
+}
+
 .lightblue {
   /* display: block; */
   margin-left: auto;
@@ -263,6 +280,28 @@ p {
   background-color: rgb(175, 176, 177);
   border-color: rgb(175, 176, 177);
   box-shadow: 0 0 0 0rem rgba(170, 175, 176, 0.5);
+}
+
+.btn-light-grey {
+  color: rgb(0, 0, 0);
+  background-color: rgb(240, 241, 242);
+  border-color: rgb(240, 241, 242);
+  height: 48px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.btn-light-grey:hover {
+  /* color: rgb(255, 255, 255); */
+  background-color: rgb(220, 221, 222);
+  border-color: rgb(220, 221, 222);
+}
+
+.btn-light-grey:focus {
+  /* color: rgb(255, 255, 255); */
+  background-color: rgb(190, 191, 192);
+  border-color: rgb(190, 191, 192);
+  box-shadow: 0 0 0 0rem rgba(190, 191, 192, 0.5);
 }
 
 .subheader {
@@ -439,6 +478,10 @@ th {
   font-weight: 500;
 }
 
+.boldertext {
+  font-weight: 600;
+}
+
 .lightgrey {
   margin-left: auto;
   margin-right: auto;
@@ -484,4 +527,19 @@ th {
   font-weight: 500;
   color: rgb(100, 100, 100);
   cursor: pointer;
+}
+
+.subsetsubheader {
+  color: rgb(89, 92, 95);
+}
+
+.lightblue-border {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(244, 252, 255);
+  max-width: 1000px;
+  padding-top: 10px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border: 1.5px solid rgb(230, 239, 241);
 }
