@@ -5,10 +5,12 @@ export default function DeluxeTCs( { setGoToDeluxeTCs, setGoToCreditHelper }) {
     return (
         <div className="col-12 text-center">
 
-            <h2 className="text-left welcome-back">
-                    Click Next to continue with DPTax Deluxe.
-            </h2>
             <div className="row">
+                <div className="col-12 blankwhite">
+                    <h2 className="text-left welcome-back">
+                            Click Next to continue with DPTax Deluxe.
+                    </h2>
+                </div>
                 <div className="col-12 text-left lightgrey mt-4">
                     <h5 className="my-3">
                         Why DPTax Deluxe?

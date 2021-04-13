@@ -468,3 +468,20 @@ th {
 .greytext {
   color: rgb(120, 120, 120);
 }
+
+.close {
+  margin-top: -15px;
+  margin-right: -5px;
+}
+
+.modalopenlink {
+  font-weight: 400;
+  color: rgb(110, 110, 110);
+  text-decoration: underline;
+}
+
+.modalopenlink:hover {
+  font-weight: 500;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}

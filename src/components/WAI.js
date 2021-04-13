@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WAI ( { } ) {
+export default function WAI ( ) {
 
     return (
         <div className="col-12 text-center">
