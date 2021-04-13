@@ -1,13 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import { CashStack } from "react-bootstrap-icons";
 
 export default function WAI ( ) {
 
+    const [jobClicked, setJobClicked] = useState(false);
     const JobContent = () => {
-        return (
-            <button type="button" className="btn btn-main">Start</button>
-        )
+        if (jobClicked === false) {
+            return (
+                <button onClick={() => setJobClicked(true)} type="button" className="btn btn-main">Start</button>
+                )
+        } else {
+            return (
+                <p className="completed">Done!</p>
+            )
+        }
     }
+
+    const [intClicked, setIntClicked] = useState(false);
+    const IntContent = () => {
+        if (intClicked === false) {
+            return (
+                <button onClick={() => setIntClicked(true)} type="button" className="btn btn-main">Start</button>
+                )
+        } else {
+            return (
+                <p className="completed">Done!</p>
+            )
+        }
+    }
+
+    const [hsaClicked, setHSAClicked] = useState(false);
+    const HSAContent = () => {
+        if (hsaClicked === false) {
+            return (
+                <button onClick={() => setHSAClicked(true)} type="button" className="btn btn-main">Start</button>
+                )
+        } else {
+            return (
+                <p className="completed">Done!</p>
+            )
+        }
+    }
+
+    const ContinueBtn = () => {
+        if (jobClicked === false || intClicked === false || hsaClicked === false) {
+            return (
+                <button type="button" className="btn btn-main mr-2" disabled>Continue</button>
+            )
+        } else {
+            return (
+                <button type="button" className="btn btn-main mr-2">Continue</button>
+            )
+        }
+    }
+
 
     return (
         <div className="col-12 text-center">
@@ -40,7 +86,7 @@ export default function WAI ( ) {
                     <div className="col-4 text-left pl-4 boldertext">Interest on 1099-INT</div>
                     <div className="col-4"></div>
                     <div className="col-4">
-                        <button type="button" className="btn btn-main">Start</button>
+                        <IntContent />
                     </div>
                     <div className="col-12"><hr className="" /></div>
                 </div>
@@ -49,13 +95,13 @@ export default function WAI ( ) {
                     <div className="col-4 text-left pl-4 boldertext">1099-SA, HSA, MSA</div>
                     <div className="col-4"></div>
                     <div className="col-4">
-                        <button type="button" className="btn btn-main">Start</button>
+                        <HSAContent />
                     </div>
                 </div>
                      
             </div>
-            <div className="mt-3">
-                <button type="button" className="btn btn-main mr-2" disabled>Continue</button>
+            <div className="mt-4">
+                <ContinueBtn />
             </div>
         </div>
     )
