@@ -1,7 +1,7 @@
 import React from "react";
 import { Check2 } from "react-bootstrap-icons";
 
-export default function ProductSelection ( {setGoToProductSelection, setGoToDeluxeTCs }) {
+export default function ProductSelection ( {setGoToProductSelection, setGoToCreditHelper, setGoToDeluxeTCs, setFreeTier, setDeluxeTier, setPremierTier }) {
     return (
         <div className="col-12 text-center">
             <h2 className="welcome-back">
@@ -87,10 +87,10 @@ export default function ProductSelection ( {setGoToProductSelection, setGoToDelu
                 <tr>
                     <td className="noborder"></td>
                     <td className="noborder">
-                        <button className="btn btn-hollow" onClick={() => setGoToProductSelection(false)}>Never Mind</button>
+                        <button className="btn btn-hollow" onClick={() => {setGoToProductSelection(false); setFreeTier(true); setGoToCreditHelper(true);}}>Never Mind</button>
                     </td>
                     <td className="deluxe bottom notopborder">
-                        <button className="btn btn-upgrade" onClick={() => {setGoToProductSelection(false); setGoToDeluxeTCs(true);} }>Continue</button>
+                        <button className="btn btn-upgrade" onClick={() => {setGoToProductSelection(false); setDeluxeTier(true); setGoToDeluxeTCs(true);} }>Continue</button>
                     </td>
                     <td className="noborder">
                         <button className="btn btn-upgrade">Upgrade</button>

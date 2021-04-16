@@ -152,27 +152,24 @@ export default function WAI ( {setGoToWAI, setGoToDCs } ) {
 
                 
                 <div className="row mt-1 mb-2">
-                    <div className="col-4 text-left pl-4 boldertext">Job (W-2)</div>
-                    <div className="col-4"></div>
-                    <div className="col-4">
+                    <div className="col-6 text-left pl-4 boldertext">Job (W-2)</div>
+                    <div className="col-6 text-right pr-5">
                         <JobContent />
                     </div>
                     <div className="col-12"><hr className="" /></div>
                 </div>
 
                 <div className="row mt-1 mb-2">
-                    <div className="col-4 text-left pl-4 boldertext">Interest on 1099-INT</div>
-                    <div className="col-4"></div>
-                    <div className="col-4">
+                    <div className="col-6 text-left pl-4 boldertext">Interest on 1099-INT</div>
+                    <div className="col-6 text-right pr-5">
                         <IntContent />
                     </div>
                     <div className="col-12"><hr className="" /></div>
                 </div>
                     
                 <div className="row mb-4">
-                    <div className="col-4 text-left pl-4 boldertext">1099-SA, HSA, MSA</div>
-                    <div className="col-4"></div>
-                    <div className="col-4">
+                    <div className="col-6 text-left pl-4 boldertext">1099-SA, HSA, MSA</div>
+                    <div className="col-6 text-right pr-5">
                         <HSAContent />
                     </div>
                 </div>
