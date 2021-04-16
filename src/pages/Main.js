@@ -12,6 +12,7 @@ import CircleLoaderFinToProd from "../components/CircleLoaderFinToProd";
 import CreditHelper from "../components/CreditHelper";
 import CHTerms from "../components/CHTerms";
 import WAI from "../components/WAI";
+import DCs from "../components/DCs";
 
 export default function Main () {
 
@@ -25,6 +26,7 @@ export default function Main () {
     const initialGoToCreditHelper = false;
     const initialGoToCHTerms = false;
     const initialGoToWAI = false;
+    const initialGoToDCs = false;
 
     const [goToTutorial, setGoToTutorial] = useState(initialGoToTutorial);
     const [goToCircle, setGoToCircle] = useState(initialGoToCircle);
@@ -34,11 +36,12 @@ export default function Main () {
     const [goToProductSelection, setGoToProductSelection] = useState(initialGoToProductSelection);
     const [goToDeluxeTCs, setGoToDeluxeTCs] = useState(initialGoToDeluxeTCs);
     const [goToCreditHelper, setGoToCreditHelper] = useState(initialGoToCreditHelper);
-    const [goToCHTerms, setGoToCHTerms] = useState(initialGoToCHTerms)
-    const [goToWAI, setGoToWAI] = useState(initialGoToWAI)
+    const [goToCHTerms, setGoToCHTerms] = useState(initialGoToCHTerms);
+    const [goToWAI, setGoToWAI] = useState(initialGoToWAI);
+    const [goToDCs, setGoToDCs] = useState(initialGoToDCs);
 
     function MainPageContent( {setGoToTutorial, setGoToFinancial }) {
-        if (goToTutorial === false && goToStart === false && goToFinancial === false && goToProductSelection === false && goToCircle === false && goToCLFTP === false && goToDeluxeTCs === false && goToCreditHelper === false && goToCHTerms === false && goToWAI === false) {
+        if (goToTutorial === false && goToStart === false && goToFinancial === false && goToProductSelection === false && goToCircle === false && goToCLFTP === false && goToDeluxeTCs === false && goToCreditHelper === false && goToCHTerms === false && goToWAI === false && goToDCs === false) {
             return <Welcome setGoToTutorial={setGoToTutorial} />
 
         } else if (goToTutorial === true) {
@@ -69,7 +72,10 @@ export default function Main () {
             return <CHTerms setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} />
 
         } else if (goToWAI === true) {
-            return <WAI />
+            return <WAI setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} />
+        
+        } else if (goToDCs === true) {
+            return <DCs />
         }
     }
 
@@ -79,7 +85,7 @@ export default function Main () {
             <Sidebar />
             <div className="container">
                 <div className="row">
-                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} />
+                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} />
                 </div>
             </div>
             

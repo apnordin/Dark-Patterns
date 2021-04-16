@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CashStack } from "react-bootstrap-icons";
 import { motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ const spinTransition = {
     ease: "linear"
 }
 
-export default function WAI ( ) {
+export default function WAI ( {setGoToWAI, setGoToDCs } ) {
 
     const [jobDone, setJobDone] = useState(false);
     const [intDone, setIntDone] = useState(false);
@@ -43,7 +43,7 @@ export default function WAI ( ) {
             const countDown = () => {
                 const interval = setInterval(() => {
                     setJobDone(true);
-                }, 5750);
+                }, 3250);
                 return () => clearInterval(interval);
             }
             countDown()
@@ -72,7 +72,7 @@ export default function WAI ( ) {
             const countDown = () => {
                 const interval = setInterval(() => {
                     setIntDone(true);
-                }, 5750);
+                }, 3750);
                 return () => clearInterval(interval);
             }
             countDown()
@@ -101,7 +101,7 @@ export default function WAI ( ) {
             const countDown = () => {
                 const interval = setInterval(() => {
                     setHSADone(true);
-                }, 5750);
+                }, 2750);
                 return () => clearInterval(interval);
             }
             countDown()
@@ -127,7 +127,7 @@ export default function WAI ( ) {
             )
         } else {
             return (
-                <button type="button" className="btn btn-main mr-2">Continue</button>
+                <button onClick={() => {setGoToWAI(false); setGoToDCs(true)}} type="button" className="btn btn-main mr-2">Continue</button>
             )
         }
     }
@@ -169,7 +169,7 @@ export default function WAI ( ) {
                     <div className="col-12"><hr className="" /></div>
                 </div>
                     
-                <div className="row mb-5">
+                <div className="row mb-4">
                     <div className="col-4 text-left pl-4 boldertext">1099-SA, HSA, MSA</div>
                     <div className="col-4"></div>
                     <div className="col-4">
