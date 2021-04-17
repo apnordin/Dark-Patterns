@@ -16,6 +16,7 @@ import DCs from "../components/DCs";
 import DeluxeUpgrade from "../components/DeluxeUpgrade";
 import PremierUpgrade from "../components/PremierUpgrade";
 import OtherSituations from "../components/OtherSituations";
+import PremierTCs from "../components/PremierTCs";
 
 export default function Main () {
 
@@ -28,6 +29,7 @@ export default function Main () {
     const [goToCLFTP, setGoToCLFTP] = useState(false)
     const [goToProductSelection, setGoToProductSelection] = useState(false);
     const [goToDeluxeTCs, setGoToDeluxeTCs] = useState(false);
+    const [goToPremierTCs, setGoToPremierTCs] = useState(false);
     const [goToCreditHelper, setGoToCreditHelper] = useState(false);
     const [goToCHTerms, setGoToCHTerms] = useState(false);
     const [goToWAI, setGoToWAI] = useState(false);
@@ -43,7 +45,23 @@ export default function Main () {
     //Conditional rendering for main page
     function MainPageContent() {
         //If all page renders are false, go return the welcome page. If any goToPage is true, render that page
-        if (goToTutorial === false && goToStart === false && goToFinancial === false && goToProductSelection === false && goToCircle === false && goToCLFTP === false && goToDeluxeTCs === false && goToCreditHelper === false && goToCHTerms === false && goToWAI === false && goToDCs === false && goToDeluxeUpgrade === false && goToPremierUpgrade === false && goToOther === false) {
+        if (
+            goToTutorial === false
+            && goToStart === false
+            && goToFinancial === false
+            && goToProductSelection === false
+            && goToCircle === false
+            && goToCLFTP === false
+            && goToDeluxeTCs === false
+            && goToPremierTCs === false
+            && goToCreditHelper === false
+            && goToCHTerms === false
+            && goToWAI === false
+            && goToDCs === false
+            && goToDeluxeUpgrade === false
+            && goToPremierUpgrade === false
+            && goToOther === false
+            ) {
             return <Welcome setGoToTutorial={setGoToTutorial} />
         
         } else if (goToTutorial === true) {
@@ -62,11 +80,14 @@ export default function Main () {
             return <CircleLoaderFinToProd setGoToCLFTP={setGoToCLFTP} setGoToProductSelection={setGoToProductSelection} />
 
         } else if (goToProductSelection === true) {
-            return <ProductSelection  setGoToProductSelection={setGoToProductSelection} setGoToCreditHelper={setGoToCreditHelper} setGoToDeluxeTCs={setGoToDeluxeTCs} setFreeTier={setFreeTier} setDeluxeTier={setDeluxeTier} setPremierTier={setPremierTier}/>
+            return <ProductSelection  setGoToProductSelection={setGoToProductSelection} setGoToCreditHelper={setGoToCreditHelper} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToPremierTCs={setGoToPremierTCs} setFreeTier={setFreeTier} setDeluxeTier={setDeluxeTier} setPremierTier={setPremierTier}/>
 
         } else if (goToDeluxeTCs === true) {
             return <DeluxeTCs setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToCreditHelper={setGoToCreditHelper} />
-
+        
+        } else if (goToPremierTCs === true) {
+            return <PremierTCs setGoToPremierTCs={setGoToPremierTCs} setGoToCreditHelper={setGoToCreditHelper} />
+        
         } else if (goToCreditHelper === true) {
             return <CreditHelper setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} />
         
@@ -99,7 +120,7 @@ export default function Main () {
             <Sidebar />
             <div className="container">
                 <div className="row">
-                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToOther={setGoToOther} setFreeTier={setFreeTier} setDeluxeTier={setDeluxeTier} setPremierTier={setPremierTier} />
+                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToPremierTCs={setGoToPremierTCs} setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToOther={setGoToOther} setFreeTier={setFreeTier} setDeluxeTier={setDeluxeTier} setPremierTier={setPremierTier} />
                 </div>
             </div>
             

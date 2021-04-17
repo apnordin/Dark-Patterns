@@ -1,7 +1,7 @@
 import React from "react";
 import { Check2 } from "react-bootstrap-icons";
 
-export default function ProductSelection ( {setGoToProductSelection, setGoToCreditHelper, setGoToDeluxeTCs, setFreeTier, setDeluxeTier, setPremierTier }) {
+export default function ProductSelection ( {setGoToProductSelection, setGoToCreditHelper, setGoToDeluxeTCs, setGoToPremierTCs, setFreeTier, setDeluxeTier, setPremierTier }) {
     return (
         <div className="col-12 text-center">
             <h2 className="welcome-back">
@@ -93,7 +93,7 @@ export default function ProductSelection ( {setGoToProductSelection, setGoToCred
                         <button className="btn btn-upgrade" onClick={() => {setGoToProductSelection(false); setDeluxeTier(true); setGoToDeluxeTCs(true);} }>Continue</button>
                     </td>
                     <td className="noborder">
-                        <button className="btn btn-upgrade">Upgrade</button>
+                        <button className="btn btn-upgrade" onClick={() => {setGoToProductSelection(false); setPremierTier(true); setGoToPremierTCs(true);}}>Upgrade</button>
                     </td>
                 </tr>
                 </tbody>
