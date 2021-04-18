@@ -27,7 +27,7 @@ const spinTransition = {
     ease: "linear"
 }
 
-export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremierUpgrade, setGoToOther, freeTier, deluxeTier, premierTier }) {
+export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremierUpgrade, setGoToDeduction, freeTier, deluxeTier, premierTier }) {
 
     const [mortgageDone, setMortgageDone] = useState(false);
     const [propertyDone, setPropertyDone] = useState(false);
@@ -135,7 +135,7 @@ export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremier
             )
         } else if (premierTier === true) {
             return (
-                <button onClick={() => {setGoToDCs(false); setGoToOther(true)}} type="button" className="btn btn-main mr-2">Continue</button>
+                <button onClick={() => {setGoToDCs(false); setGoToDeduction(true)}} type="button" className="btn btn-main mr-2">Continue</button>
             )
         }
     }

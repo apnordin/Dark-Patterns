@@ -15,8 +15,8 @@ import WAI from "../components/WAI";
 import DCs from "../components/DCs";
 import DeluxeUpgrade from "../components/DeluxeUpgrade";
 import PremierUpgrade from "../components/PremierUpgrade";
-import OtherSituations from "../components/OtherSituations";
 import PremierTCs from "../components/PremierTCs";
+import Deduction from "../components/Deduction";
 
 export default function Main () {
 
@@ -36,7 +36,7 @@ export default function Main () {
     const [goToDCs, setGoToDCs] = useState(false);
     const [goToDeluxeUpgrade, setGoToDeluxeUpgrade] = useState(false);
     const [goToPremierUpgrade, setGoToPremierUpgrade] = useState(false);
-    const [goToOther, setGoToOther] = useState(false);
+    const [goToDeduction, setGoToDeduction] = useState(false);
 
     const [freeTier, setFreeTier] = useState(false);
     const [deluxeTier, setDeluxeTier] = useState(false);
@@ -60,7 +60,7 @@ export default function Main () {
             && goToDCs === false
             && goToDeluxeUpgrade === false
             && goToPremierUpgrade === false
-            && goToOther === false
+            && goToDeduction === false
             ) {
             return <Welcome setGoToTutorial={setGoToTutorial} />
         
@@ -98,18 +98,16 @@ export default function Main () {
             return <WAI setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} />
         
         } else if (goToDCs === true) {
-            return <DCs setGoToDCs={setGoToDCs} setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToOther={setGoToOther} freeTier={freeTier} deluxeTier={deluxeTier} premierTier={premierTier} />
+            return <DCs setGoToDCs={setGoToDCs} setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToDeduction={setGoToDeduction} freeTier={freeTier} deluxeTier={deluxeTier} premierTier={premierTier} />
         
-
-
         } else if (goToDeluxeUpgrade === true) {
-            return <DeluxeUpgrade />
+            return <DeluxeUpgrade setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToDeduction={setGoToDeduction} setDeluxeTier={setDeluxeTier} />
 
         } else if (goToPremierUpgrade === true) {
-            return <PremierUpgrade />
+            return <PremierUpgrade setGoToPremierUpgrade={setGoToDeluxeUpgrade} setGoToDeduction={setGoToDeduction} />
 
-        } else if (goToOther === true) {
-            return <OtherSituations />
+        } else if (goToDeduction === true) {
+            return <Deduction />
         }
         
     }
@@ -120,7 +118,25 @@ export default function Main () {
             <Sidebar />
             <div className="container">
                 <div className="row">
-                   <MainPageContent setGoToTutorial={setGoToTutorial} setGoToCircle={setGoToCircle} setGoToStart={setGoToStart} setGoToFinancial={setGoToFinancial} setGoToProductSelection={setGoToProductSelection} setGoToCLFTP={setGoToCLFTP} setGoToDeluxeTCs={setGoToDeluxeTCs} setGoToPremierTCs={setGoToPremierTCs} setGoToCreditHelper={setGoToCreditHelper} setGoToCHTerms={setGoToCHTerms} setGoToWAI={setGoToWAI} setGoToDCs={setGoToDCs} setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToOther={setGoToOther} setFreeTier={setFreeTier} setDeluxeTier={setDeluxeTier} setPremierTier={setPremierTier} />
+                   <MainPageContent
+                   setGoToTutorial={setGoToTutorial}
+                   setGoToCircle={setGoToCircle}
+                   setGoToStart={setGoToStart}
+                   setGoToFinancial={setGoToFinancial}
+                   setGoToProductSelection={setGoToProductSelection}
+                   setGoToCLFTP={setGoToCLFTP}
+                   setGoToDeluxeTCs={setGoToDeluxeTCs}
+                   setGoToPremierTCs={setGoToPremierTCs}
+                   setGoToCreditHelper={setGoToCreditHelper}
+                   setGoToCHTerms={setGoToCHTerms}
+                   setGoToWAI={setGoToWAI}
+                   setGoToDCs={setGoToDCs}
+                   setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} 
+                   setGoToPremierUpgrade={setGoToPremierUpgrade}
+                   setGoToDeduction={setGoToDeduction}
+                   setFreeTier={setFreeTier}
+                   setDeluxeTier={setDeluxeTier}
+                   setPremierTier={setPremierTier} />
                 </div>
             </div>
             
