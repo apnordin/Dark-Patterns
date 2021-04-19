@@ -13,6 +13,10 @@ export default function Sidebar() {
         window.open(url, '_blank');
     }
 
+    const restart = () => {
+        window.location.reload();
+    }
+
     const initialText = 'Credit Helper';
     const [text, setText] = useState(initialText);
 
@@ -24,7 +28,7 @@ export default function Sidebar() {
             <span className="dot">
                 <HandThumbsDownFill className="thumbBig" size={35} color="white" />
             </span>
-            <div className="bannerlogo">
+            <div className="bannerlogo" onClick={restart}>
                 <span className="dotsmall">
                     <span className="namelogo">darkpatterns
                     <HandThumbsDownFill className="thumbSmall" size={13} color="white" />

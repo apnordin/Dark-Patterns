@@ -118,6 +118,11 @@ p {
   margin-top: 32px;
 }
 
+.bannerlogo:hover {
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+}
+
 .namelogo {
   margin-left: 22px;
   font-weight: 700;
@@ -251,9 +256,10 @@ p {
   margin-right: auto;
   background-color: rgb(244, 252, 255);
   max-width: 1000px;
-  padding-top: 10px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
 }
 
 .lightblue-border {
@@ -616,6 +622,17 @@ th {
 .modalopenlink:hover {
   font-weight: 500;
   color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.hyperlink {
+  font-weight: 400;
+  color: rgb(30, 103, 172);
+  text-decoration: underline;
+}
+
+.hyperlink:hover {
+  color: rgb(73, 142, 207);
   cursor: pointer;
 }
 
