@@ -104,7 +104,7 @@ export default function Main () {
             return <DeluxeUpgrade setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} setGoToDeduction={setGoToDeduction} setDeluxeTier={setDeluxeTier} />
 
         } else if (goToPremierUpgrade === true) {
-            return <PremierUpgrade setGoToPremierUpgrade={setGoToDeluxeUpgrade} setGoToDeduction={setGoToDeduction} />
+            return <PremierUpgrade setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToDeduction={setGoToDeduction} setPremierTier={setPremierTier} />
 
         } else if (goToDeduction === true) {
             return <Deduction />
