@@ -72,7 +72,7 @@ export default function WAI ( {setGoToWAI, setGoToDCs } ) {
             const countDown = () => {
                 const interval = setInterval(() => {
                     setIntDone(true);
-                }, 3750);
+                }, 1750);
                 return () => clearInterval(interval);
             }
             countDown()

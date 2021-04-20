@@ -16,15 +16,15 @@ export default function StartPage ( {setGoToStart, setGoToFinancial }) {
             </h1>
             <div className="row">
                 <div className="col-12 text-center lightblue mt-4">
-                    <h5 className="maintexth5 py-2">
-                        DPTax is a COMPLETELY FREE tax preparation service to file taxes online. Easily file federal and state income tax returns with 100% accuracy to get your dividend. We offer the convenience of preparing and filing your tax return from virtually any computer or mobile device with Internet access at no charge.
-                    </h5>
-                    <h5 className="maintexth5 pb-2">
+                    <p className="maintext py-2">
+                        DPTax is a <span className="bold">COMPLETELY FREE</span> tax preparation service to file taxes online. Easily file federal and state income tax returns with 100% accuracy to get your dividend. We offer the convenience of preparing and filing your tax return from virtually any computer or mobile device with Internet access at no charge.
+                    </p>
+                    <p className="maintext">
                         Armed with the best features and support, you are going to love filing with us!
-                    </h5>
+                    </p>
                 </div>
                 <div className="col-12 text-center">
-                    <h2 className="mt-5 mb-4">Just click below to begin filing!</h2>
+                    <h2 className="mt-4 mb-3">Just click below to begin filing!</h2>
                     <button onClick={() => {setGoToStart(false); setGoToFinancial(true);}} type="button" className="btn btn-main ml-1 mt-3">File for FREE!</button>
                 </div>
             </div>

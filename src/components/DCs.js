@@ -43,7 +43,7 @@ export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremier
             const countDown = () => {
                 const interval = setInterval(() => {
                     setMortgageDone(true);
-                }, 3250);
+                }, 1250);
                 return () => clearInterval(interval);
             }
             countDown()
@@ -72,7 +72,7 @@ export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremier
             const countDown = () => {
                 const interval = setInterval(() => {
                     setPropertyDone(true);
-                }, 3250);
+                }, 2250);
                 return () => clearInterval(interval);
             }
             countDown()
@@ -101,7 +101,7 @@ export default function DCs ( { setGoToDCs, setGoToDeluxeUpgrade, setGoToPremier
             const countDown = () => {
                 const interval = setInterval(() => {
                     setCharityDone(true);
-                }, 3250);
+                }, 1750);
                 return () => clearInterval(interval);
             }
             countDown()
