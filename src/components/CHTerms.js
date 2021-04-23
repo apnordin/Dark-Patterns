@@ -32,7 +32,7 @@ export default function CHTerms( { setGoToCHTerms, setGoToWAI } ) {
                     <div className="col-4">
                         <form>
                             <div className="form-group">
-                                
+                                <label htmlFor="lastname"></label>
                                 <input type="text" className="form-control mt-2" id="lastname"></input>
                                 <small id="lastnameHelp" className="form-text">Last name</small>
                             </div>

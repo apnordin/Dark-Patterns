@@ -17,10 +17,10 @@ import DeluxeUpgrade from "../components/DeluxeUpgrade";
 import PremierUpgrade from "../components/PremierUpgrade";
 import PremierTCs from "../components/PremierTCs";
 import Deduction from "../components/Deduction";
+import LiveMax from "../components/LiveMax";
 
 export default function Main () {
 
-    
     // All page renders start off as FALSE
     const [goToTutorial, setGoToTutorial] = useState(false);
     const [goToCircle, setGoToCircle] = useState(false);
@@ -37,7 +37,9 @@ export default function Main () {
     const [goToDeluxeUpgrade, setGoToDeluxeUpgrade] = useState(false);
     const [goToPremierUpgrade, setGoToPremierUpgrade] = useState(false);
     const [goToDeduction, setGoToDeduction] = useState(false);
+    const [goToLiveMax, setGoToLiveMax] = useState(false);
 
+    // Also, the user starts off unenrolled in a product tier
     const [freeTier, setFreeTier] = useState(false);
     const [deluxeTier, setDeluxeTier] = useState(false);
     const [premierTier, setPremierTier] = useState(false);
@@ -61,6 +63,7 @@ export default function Main () {
             && goToDeluxeUpgrade === false
             && goToPremierUpgrade === false
             && goToDeduction === false
+            && goToLiveMax === false
             ) {
             return <Welcome setGoToTutorial={setGoToTutorial} />
         
@@ -107,7 +110,9 @@ export default function Main () {
             return <PremierUpgrade setGoToPremierUpgrade={setGoToPremierUpgrade} setGoToDeduction={setGoToDeduction} setPremierTier={setPremierTier} />
 
         } else if (goToDeduction === true) {
-            return <Deduction />
+            return <Deduction setGoToDeduction={setGoToDeduction} setGoToLiveMax={setGoToLiveMax} />
+        } else if (goToLiveMax === true) {
+            return <LiveMax />
         }
         
     }
@@ -134,6 +139,8 @@ export default function Main () {
                    setGoToDeluxeUpgrade={setGoToDeluxeUpgrade} 
                    setGoToPremierUpgrade={setGoToPremierUpgrade}
                    setGoToDeduction={setGoToDeduction}
+                   setGoToLiveMax={setGoToLiveMax}
+                   
                    setFreeTier={setFreeTier}
                    setDeluxeTier={setDeluxeTier}
                    setPremierTier={setPremierTier} />

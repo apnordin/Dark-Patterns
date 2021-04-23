@@ -91,6 +91,11 @@ p {
   /* font-weight: 600; */
 }
 
+.deduction {
+  margin-top: 50px;
+  line-height: 55px;
+}
+
 .mainpagewelcome {
   margin-top: 35px;
   font-weight: 700;
@@ -665,26 +670,26 @@ th {
 
 .strdbubble {
   height: 375px;
-  width: 90%;
+  max-width: 75%;
   border-radius: 10px 10px 0px 0px;
   display: inline-block;
   background-color: rgb(11, 182, 199);
   position: absolute;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 2%;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
 .itembubble {
-  height: 220px;
-  width: 90%;
+  height: 275px;
+  max-width: 75%;
   border-radius: 10px 10px 0px 0px;
   display: inline-block;
   background-color: rgb(0, 125, 144);
   position: absolute;
-  margin-left: auto;
+  margin-left: 2%;
   margin-right: auto;
   left: 0;
   right: 0;
@@ -700,6 +705,8 @@ th {
 }
 
 .deduction-type {
+  padding-left: 10%;
+  padding-right: 10%;
   font-size: 24px;
 }
 
