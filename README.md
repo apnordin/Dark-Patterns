@@ -1,6 +1,6 @@
 # Dark Patterns
 
-This application was deployed using Heroku and can be found [here](https://dark-patterns-324.herokuapp.com/).
+This application was deployed using Heroku. It can be found [here](https://dark-patterns-324.herokuapp.com/).
 
 ## The Goal
 
